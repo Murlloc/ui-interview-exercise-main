@@ -1,0 +1,90 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 580px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__image {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card__body {
+  padding: 20px 16px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card__remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card-item__label { min-width: 64px; }
+
+.card-item__value {
+  color: #fff;
+  min-width: 32px;
+}
+
+.btn {
+  cursor: pointer;
+  min-width: 40px;
+}
+
+.btn--increment { background: var(--btn-increment); }
+.btn--increment:hover { background: var(--btn-increment-hover); }
+
+.btn--decrement { background: var(--btn-decrement); }
+.btn--decrement:hover { background: var(--btn-decrement-hover); }
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.action {
+  background: #e8e8e8;
+  color: #182432;
+  padding: 0.6em 1em;
+  border-radius: 2px;
+  cursor: pointer;
+  font: inherit;
+}
